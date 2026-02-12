@@ -3,7 +3,7 @@ const {
     ListObjectsV2Command
 } = require("@aws-sdk/client-s3");
 
-const s3 = require("../utils/s3");
+const s3 = require("./utils/s3");
 
 const BUCKET = process.env.AWS_BUCKET_NAME;
 

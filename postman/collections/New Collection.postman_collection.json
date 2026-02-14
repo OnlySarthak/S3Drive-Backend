@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "443d8a85-f56d-4288-a2f4-ceda49940568",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "push",
+      "id": "3b525c93-4be5-4b45-8259-444cf3267a1f",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "pull",
+      "id": "88fc4063-c965-47bc-a42d-6e746fcf4fae",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create folder",
+      "id": "3e49f0cf-5f94-4641-ab73-0c7dfb13bedb",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "6d36a253-e871-443b-b75e-a37e48ffa958",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "path",
+            "value": "test/Screenshot 2025-09-21 001517.png",
+            "type": "text",
+            "uuid": "9553f933-a1d8-4d13-a8cb-bd7978766e69",
+            "disabled": true
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "uuid": "41039adf-9a67-4f63-91c8-84a60981330b",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"path\" : \"test/Screenshot 2025-09-21 001517.png\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/delete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

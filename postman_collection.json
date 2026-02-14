@@ -1,0 +1,113 @@
+{
+  "info": {
+    "name": "S3-Drive Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "00000000-0000-0000-0000-000000000000"
+  },
+  "item": [
+    {
+      "name": "Upload File",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "path",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/upload",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "upload"
+          ]
+        },
+        "description": "Upload a file to S3. Multipart form-data with `file` and optional `path`."
+      }
+    },
+    {
+      "name": "Create Folder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"path\": \"\",\n  \"folderName\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/create-folder",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "create-folder"
+          ]
+        },
+        "description": "Create a new folder in S3 under the given path."
+      }
+    },
+    {
+      "name": "List Files/Folder",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/list?path={{path}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "list"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "{{path}}",
+              "description": "Path to list in S3. Can be empty for root."
+            }
+          ]
+        },
+        "description": "List files and folders at the specified path."
+      }
+    }
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "path",
+      "value": ""
+    }
+  ]
+}
